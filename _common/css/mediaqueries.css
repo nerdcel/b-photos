@@ -1,0 +1,12 @@
+@media all and (min-width: 480px) {	
+	
+	.viewport:after { content: "min-width: 480px"; position: absolute; top: 10px; left: 10px; font-size: 22px; font-size: 1.375rem; z-index: 100; background-color: rgba(255,255,255,0.6); }
+	
+}
+
+
+@media all and (min-width: 768px) {	
+	
+	.viewport:after { content: "min-width: 768px"; }
+	
+}
