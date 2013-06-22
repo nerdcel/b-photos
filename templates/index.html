@@ -13,27 +13,73 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/_common/css/normalize.css">
         <link rel="stylesheet" href="/_common/css/main.css">
         <link rel="stylesheet" href="/_common/css/styles.css">
+        <link rel="stylesheet" href="/_common/css/mediaqueries.css">
         <script src="/_common/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body<?php echo (isset($_GET["query"]))? ' class="viewport"' : NULL; ?>>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
-        <div id="main">
+        <figure id="logo">
+        	<img src="/_common/img/logos/logo.png" alt="ab-photography" />
+        </figure>
+        
+        <article id="gallery">
         
         	<!-- Image Slider -->
-        	<div class="moduleImageSlider">
+        	<section class="moduleImageSlider">
         	
-        	</div>
+        		<ul class="slide clearfix">
+        			<li style="background-image: url('/images/slider/slide_1.jpg')">Image 1</li>
+        			<li style="background-image: url('/images/slider/slide_2.jpg')">Image 2</li>
+        			<li style="background-image: url('/images/slider/slide_3.jpg')">Image 3</li>
+        			<li style="background-image: url('/images/slider/slide_4.jpg')">Image 4</li>
+        			<li style="background-image: url('/images/slider/slide_5.jpg')">Image 5</li>
+        			<li style="background-image: url('/images/slider/slide_6.jpg')">Image 6</li>
+        		</ul>
+        		
+        		<div>&nbsp;</div>
+        		
+        		<nav>
+        			
+        		</nav>
+        		
+        	</section>
+        	
+        </article>
         
-        </div>
+        <article id="main">
+        
+        	<nav class="moduleNavigationMain">
+        		<div>
+	        		<ul class="clearfix">
+	        			<li class="active"><a href="information.html">Information</a></li>
+	        			<li><a href="portfolio.html">Portfolio</a></li>
+	        			<li><a href="kontakt.html">Kontakt</a></li>
+	        		</ul>
+        		</div>
+    		</nav>
+        
+        	<div id="inner">
+        	        	
+        	<!-- Other Content -->         		
+	    		
+	    		<section id="information" class="moduleArticle">
+	    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	    		</section>
+	    		
+        	</div>
+	        	        
+        </article>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/_common/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<!--         <script src="/_common/js/vendor/jquery.transit.js"></script> -->
         <script src="/_common/js/plugins.js"></script>
         <script src="/_common/js/main.js"></script>
         <script src="/_common/js/documentready.js"></script>
