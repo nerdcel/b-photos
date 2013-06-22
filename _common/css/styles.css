@@ -1,0 +1,16 @@
+/*CUSTOM STYLES*/
+
+
+body {
+	background-color: blue;
+}
+
+
+
+/* Image slider */
+.moduleImageSlider {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: #000000;
+}
