@@ -14,6 +14,14 @@ body, html {
 	top: 0px;
 	margin: 0 0 0 70%;
 	z-index: 3;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+#logo.yellow {
+	background-color: #ffcc00;
 }
 
 
@@ -28,9 +36,16 @@ body, html {
 	position: relative;
 	z-index: 2;
 	margin-top: -50px;
-	min-height: 600px;
-	height: 600px;
+	min-height: 800px;
+	height: 800px;
 	height: auto!important;
+	-webkit-transition: background-color 0.8s;
+	-moz-transition: background-color 0.8s;
+	-o-transition: background-color 0.8s;
+	transition: background-color 0.8s;
+}
+.fixedPosition #main {
+	background: rgba(244,244,244,0.9);
 }
 
 #inner { 
@@ -40,6 +55,16 @@ body, html {
 	max-width: 960px; 
 	margin: 0 auto; 
 	position: relative;
+	padding: 45px 0 45px;
+}
+#inner > section {
+	padding: 0 0 100px;
+	min-height: 500px;
+	height: 500px;
+	height: auto!important;
+}
+.fixedPosition #inner {
+	padding: 145px 0 45px;
 }
 
 /* Main Navigation */
@@ -50,16 +75,13 @@ body, html {
 	position: relative;
 	top: -15px;
 	border-bottom: 15px solid #ffcc00;
-	-webkit-transition: all 0.9s;
-	-moz-transition: all 0.9s;
-	-o-transition: all 0.9s;
-	transition: all 0.9s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
 }
 
-.moduleNavigationMain.fixedPosition {
-	top: 0px; position: fixed;
-	z-index: 3;
-}
+
 .moduleNavigationMain div {
 	background-color: #2b2b2b; 
 	height: 45px;
@@ -86,7 +108,7 @@ body, html {
 .moduleNavigationMain ul li a:link,
 .moduleNavigationMain ul li a:active,
 .moduleNavigationMain ul li a:visited { 
-	padding: 11px 15px 0 15px;
+	padding: 14px 15px 0 15px;
 	height: 35px; 
 	color: #f2f2f2; 
 	position: relative; 
@@ -106,13 +128,34 @@ body, html {
 .moduleNavigationMain ul li.active a:before {
 	display: block; width: 20px; height: 1px;
 	position: absolute; background: #000; opacity: 0.5;
-	bottom: -10px; left: -8px; content: ""; 
+	bottom: -7px; left: -8px; content: ""; 
 }
 
 .moduleNavigationMain ul li.active a:after {
 	display: block; width: 20px; height: 1px;
 	position: absolute; background: #000; opacity: 0.5;
-	bottom: -10px; right: -8px; content: ""; 
+	bottom: -7px; right: -8px; content: ""; 
+}
+.fixedPosition .moduleNavigationMain {
+	top: 0px; 
+	position: fixed;
+	z-index: 5;
+	height: auto;
+	border-bottom: 5px solid #ffcc00;
+	margin-bottom: 0px;
+}
+.fixedPosition .moduleNavigationMain div ul {
+	top: 0px;
+}
+.fixedPosition .moduleNavigationMain div ul li {
+	height: auto;
+}
+.fixedPosition .moduleNavigationMain div ul li a {
+	top: 0px;
+}
+.fixedPosition .moduleNavigationMain div ul li a:after,
+.fixedPosition .moduleNavigationMain div ul li a:before {
+	display: none;
 }
 
 /* Slider */
@@ -121,10 +164,28 @@ body, html {
 	top: 0px;
 	width: 100%;
 	background-color: #ececec;
-	height: 95%;
+	height: 100%;
 	z-index: 1;
 	margin: 2px 0 0;
 	background-color: #ffcc00;
+}
+.moduleImageSlider header {
+	position: absolute;
+	font-size: 48px; font-size: 2.5rem;
+	color: #f2f2f2;
+	font-weight: 900;
+	top: 45%;
+	left: 20%;
+}
+.moduleImageSlider.hideHeader header {
+	display: none;
+}
+.fixedPosition .moduleImageSlider {
+	-webkit-transition: top 0.8s;
+	-moz-transition: top 0.8s;
+	-o-transition: top 0.8s;
+	transition: top 0.8s;
+	z-index: 0;
 }
 
 .moduleImageSlider div {
@@ -177,6 +238,13 @@ body, html {
 .moduleImageSlider nav ul { list-style: none; padding: 0; margin: 0 auto; position: relative; left: 50%; float: left; }
 .moduleImageSlider nav ul li { right: 50%; position: relative; float: left; background: transparent url("/_common/img/sprites/sprite_icons.png") 0px 0 no-repeat; height: 15px; width: 15px; padding: 0 10px 0 0; }
 .moduleImageSlider nav ul li.active { background-position: -100px 0; }
+
+
+/* Headline */
+.moduleHeadline {
+	font-weight: 600;
+	font-size: 26px; font-size: 1.625rem;
+}
 
 
 
